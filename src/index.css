@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: #6F1028;
+    color: #F8F5EF;
+  }
+}
+
+/* Custom editorial styling */
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+/* Gold Shimmer effect for titles */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #C8A15A 0%,
+    #F3E7C4 50%,
+    #C8A15A 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: goldShimmer 5s linear infinite;
+}
+
+/* Subtle Ken Burns Effect */
+@keyframes kenBurnsSlow {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsSlow 20s ease-in-out infinite alternate;
+}
+
+/* Hide scrollbar for clean tab filters */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
