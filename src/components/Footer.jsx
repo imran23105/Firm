@@ -40,9 +40,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-burgundyDark text-white relative border-t border-gold/30 pt-20 pb-12 overflow-hidden select-none">
-      {/* Background radial highlight */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-48 bg-champagne/5 blur-3xl pointer-events-none" />
+    <footer className="bg-gradient-to-b from-[#24030D] via-[#1A0208] to-[#100105] text-white relative border-t border-gold/30 pt-20 pb-12 overflow-hidden select-none">
+      {/* Background radial highlight & subtle gold ambient light */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-gradient-to-b from-champagne/10 via-gold/5 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-10 w-96 h-96 bg-gradient-to-tl from-gold/5 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -177,7 +178,7 @@ export default function Footer() {
             transition={{ duration: 0.3 }}
             onClick={scrollToTop}
             aria-label="Return to top"
-            className="fixed bottom-6 right-6 z-40 bg-burgundy hover:bg-burgundyDark border border-gold text-champagne hover:text-white p-3 shadow-elevated transition-colors"
+            className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-burgundy via-[#80132F] to-burgundy hover:from-[#5A0D20] hover:to-burgundy border border-gold text-champagne hover:text-white p-3 shadow-elevated transition-all duration-300 rounded-sm"
           >
             <ArrowUp className="w-4 h-4 text-gold" />
           </motion.button>

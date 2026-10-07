@@ -30,15 +30,19 @@ export default function Practice() {
   const currentPractice = practiceAreas[activePracticeIndex];
 
   return (
-    <section id="practice" className="py-24 md:py-32 bg-ivory text-charcoal relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="practice" className="py-24 md:py-32 bg-gradient-to-b from-[#EDE3D2] via-[#FAF6EE] to-[#EBE2D4] text-charcoal relative overflow-hidden">
+      {/* Background radial gold aura */}
+      <div className="absolute top-1/4 right-10 w-[600px] h-[500px] bg-gradient-to-bl from-champagne/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-10 w-[500px] h-[400px] bg-gradient-to-tr from-gold/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 pb-8 border-b border-gold/30">
           <div className="max-w-3xl">
             <Reveal>
               <div className="flex items-center gap-3 mb-3">
-                <span className="w-8 h-[1.5px] bg-gold" />
+                <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
                 <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
                   AREAS OF COUNSEL
                 </span>
@@ -46,8 +50,8 @@ export default function Practice() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-burgundy leading-[1.12]">
-                Comprehensive Legal Solutions Across Jurisdictions
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.12]">
+                <span className="text-gradient-burgundy">Comprehensive Legal Solutions Across Jurisdictions</span>
               </h2>
             </Reveal>
 
@@ -81,7 +85,7 @@ export default function Practice() {
                 >
                   {/* Left-to-Right Burgundy Flood Fill */}
                   <div
-                    className={`absolute inset-0 bg-burgundy transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] -z-0 ${
+                    className={`absolute inset-0 bg-gradient-to-r from-[#4A071A] via-[#6F1028] to-[#80132F] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] -z-0 ${
                       isActive ? 'translate-x-0' : '-translate-x-full'
                     }`}
                   />
@@ -223,7 +227,7 @@ export default function Practice() {
               {/* Action Button: Refined & Elegant */}
               <button
                 onClick={scrollToContact}
-                className="group w-full relative overflow-hidden bg-burgundy hover:bg-burgundyDark text-white text-xs uppercase font-sans font-semibold tracking-[0.16em] py-3.5 border border-burgundy hover:border-gold transition-all duration-300 shadow-sm text-center"
+                className="group w-full relative overflow-hidden bg-gradient-to-r from-burgundy via-[#80132F] to-burgundy text-white text-xs uppercase font-sans font-semibold tracking-[0.16em] py-3.5 border border-gold/40 hover:border-gold transition-all duration-300 shadow-sm text-center"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2.5">
                   <span>CONSULT PRACTICE HEAD</span>

@@ -38,7 +38,7 @@ function CounterItem({ value, suffix = '', label }) {
 
   return (
     <div ref={ref} className="text-center sm:text-left py-4 sm:py-0">
-      <div className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-burgundy tracking-tight">
+      <div className="font-serif text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-gradient-burgundy">
         {count || value}
         <span className="text-gold font-normal text-3xl sm:text-4xl ml-0.5">{suffix}</span>
       </div>
@@ -51,14 +51,18 @@ function CounterItem({ value, suffix = '', label }) {
 
 export default function Firm() {
   return (
-    <section id="firm" className="py-24 md:py-32 bg-ivory text-charcoal relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="firm" className="py-24 md:py-32 bg-gradient-to-b from-[#FAF6EE] via-[#F4EDE2] to-[#ECE3D4] text-charcoal relative overflow-hidden">
+      {/* Subtle radial luxury glows */}
+      <div className="absolute top-0 right-1/4 w-[600px] h-[400px] bg-gradient-to-b from-champagne/25 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[500px] h-[350px] bg-gradient-to-tr from-gold/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header: THE FIRM */}
         <div className="max-w-4xl">
           <Reveal>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-[1.5px] bg-gold" />
+              <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
               <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
                 {firmData.eyebrow}
               </span>
@@ -66,8 +70,8 @@ export default function Firm() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-burgundy leading-[1.15] mb-6">
-              {firmData.heading}
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.15] mb-6">
+              <span className="text-gradient-burgundy">{firmData.heading}</span>
             </h2>
           </Reveal>
 
@@ -79,7 +83,7 @@ export default function Firm() {
         </div>
 
         {/* Counter Strip: 2009 Founded | 5 Jurisdictions | 12 Practice Areas */}
-        <div className="my-16 py-8 border-y border-gold/30">
+        <div className="my-16 py-8 border-y border-gold/30 bg-gradient-to-r from-transparent via-white/50 to-transparent backdrop-blur-[2px]">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gold/25">
             {firmData.counters.map((item, idx) => (
               <div key={item.label} className={idx > 0 ? 'sm:pl-8' : ''}>
@@ -110,20 +114,20 @@ export default function Firm() {
             {firmData.definingPrinciples.map((principle, index) => (
               <div
                 key={principle.number}
-                className="group py-8 sm:py-10 transition-colors duration-300 hover:bg-champagne/15 px-2 -mx-2"
+                className="group py-8 sm:py-10 transition-all duration-300 hover:bg-gradient-to-r hover:from-white/70 hover:via-champagne/20 hover:to-transparent px-4 -mx-4 rounded-sm"
               >
                 <Reveal delay={index * 0.1}>
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-baseline">
                     {/* Big Numeral */}
                     <div className="md:col-span-2">
-                      <span className="font-serif text-3xl sm:text-4xl font-light text-gold group-hover:text-burgundy transition-colors duration-300">
+                      <span className="font-serif text-3xl sm:text-4xl font-light text-gradient-gold group-hover:scale-105 inline-block transition-transform duration-300">
                         {principle.number}
                       </span>
                     </div>
 
                     {/* Headline */}
                     <div className="md:col-span-4">
-                      <h3 className="font-serif text-2xl sm:text-3xl text-burgundy font-medium tracking-wide">
+                      <h3 className="font-serif text-2xl sm:text-3xl text-burgundy font-medium tracking-wide group-hover:text-[#4A071A] transition-colors">
                         {principle.title}
                       </h3>
                     </div>

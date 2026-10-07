@@ -38,14 +38,14 @@ export default function Hero() {
           className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.08]"
         />
         
-        {/* Luxury Editorial Overlay: Blends the grand architecture with warm ivory & gold ambience */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FBF8F2]/90 via-[#F8F4EB]/70 to-[#F2EADB]/95 backdrop-blur-[1px]" />
+        {/* Luxury Editorial Multi-Stop Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF7F2]/95 via-[#F6ECE0]/75 to-[#ECE0CD]/95 backdrop-blur-[1px]" />
         
-        {/* Warm Amber & Burgundy Radial Spotlight behind Center Headline */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[550px] bg-gradient-to-tr from-champagne/40 via-gold/20 to-burgundy/10 rounded-full blur-[100px] pointer-events-none" />
+        {/* Warm Amber, Gold & Royal Burgundy Radial Mesh Spotlights */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[600px] bg-gradient-to-tr from-champagne/45 via-gold/25 to-[#6F1028]/15 rounded-full blur-[110px] pointer-events-none" />
 
         {/* Subtle Vignette Gradient at Edges */}
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-ivory/30 to-ivory/80 pointer-events-none" />
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#F8F4EB]/30 to-[#EAE0CD]/80 pointer-events-none" />
       </div>
 
       {/* ─────────────────────────────────────────────────────────────
@@ -90,9 +90,11 @@ export default function Hero() {
               initial={{ y: '100%', opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[5.4rem] font-semibold leading-[1.05] text-burgundy tracking-[-0.01em] drop-shadow-[0_2px_12px_rgba(255,255,255,0.8)]"
+              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[5.4rem] font-semibold leading-[1.05] tracking-[-0.01em] drop-shadow-[0_2px_12px_rgba(255,255,255,0.8)]"
             >
-              {heroData.titlePrimary}
+              <span className="text-gradient-burgundy">
+                {heroData.titlePrimary}
+              </span>
             </motion.h1>
           </div>
 
@@ -104,15 +106,7 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="font-serif italic text-4xl sm:text-6xl md:text-7xl lg:text-[5.4rem] font-normal leading-[1.05]"
             >
-              <span
-                className="gold-shimmer"
-                style={{
-                  background: 'linear-gradient(135deg, #A8762D 0%, #E2C278 38%, #8E5C1B 70%, #D4AC5F 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  filter: 'drop-shadow(0 2px 4px rgba(168,118,45,0.35))',
-                }}
-              >
+              <span className="gold-shimmer">
                 {heroData.titleSecondary}
               </span>
             </motion.h1>
@@ -134,7 +128,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85 }}
-          className="bg-white/90 backdrop-blur-md border border-gold/50 px-6 sm:px-8 py-4 mb-9 max-w-3xl shadow-[0_8px_25px_rgba(59,7,24,0.06)]"
+          className="bg-gradient-to-r from-white/95 via-[#FCF9F3]/95 to-white/95 backdrop-blur-md border border-gold/50 px-6 sm:px-8 py-4 mb-9 max-w-3xl shadow-[0_8px_30px_rgba(111,16,40,0.06)]"
         >
           <div className="text-[9.5px] font-sans font-bold uppercase tracking-[0.24em] text-gold mb-2 flex items-center justify-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold" />
@@ -161,10 +155,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-8 w-full sm:w-auto"
         >
-          {/* Primary Burgundy CTA with Gold Bevel */}
+          {/* Primary Burgundy CTA with Gold Bevel & Gradient */}
           <button
             onClick={() => scrollTo('practice')}
-            className="group relative overflow-hidden bg-burgundy hover:bg-burgundyDark text-white font-sans text-xs uppercase font-semibold tracking-[0.18em] px-9 py-4 sm:py-4.5 border border-burgundy hover:border-gold transition-all duration-300 shadow-[0_12px_28px_rgba(111,16,40,0.25)] hover:-translate-y-0.5 text-center w-full sm:w-auto"
+            className="group relative overflow-hidden bg-gradient-to-r from-[#6F1028] via-[#851633] to-[#55071D] hover:from-[#5A091E] hover:to-[#430415] text-white font-sans text-xs uppercase font-semibold tracking-[0.18em] px-9 py-4 sm:py-4.5 border border-gold/60 transition-all duration-300 shadow-[0_12px_28px_rgba(111,16,40,0.25)] hover:-translate-y-0.5 text-center w-full sm:w-auto"
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
               <span>EXPLORE OUR PRACTICE AREAS</span>
@@ -173,10 +167,10 @@ export default function Hero() {
             <span className="absolute inset-0 bg-[#4F071A] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out z-0" />
           </button>
 
-          {/* Secondary Editorial CTA */}
+          {/* Secondary Editorial CTA with Subtle Gold/Ivory Gradient */}
           <button
             onClick={() => scrollTo('contact')}
-            className="group bg-white/95 hover:bg-white text-burgundy border-2 border-gold hover:border-burgundy font-sans text-xs uppercase font-semibold tracking-[0.18em] px-8 py-4 sm:py-4.5 flex items-center justify-center gap-2.5 transition-all duration-300 shadow-sm w-full sm:w-auto"
+            className="group bg-gradient-to-r from-white via-[#FAF6F0] to-white hover:bg-white text-burgundy border-2 border-gold hover:border-burgundy font-sans text-xs uppercase font-semibold tracking-[0.18em] px-8 py-4 sm:py-4.5 flex items-center justify-center gap-2.5 transition-all duration-300 shadow-sm w-full sm:w-auto"
           >
             <span>CONNECT WITH US</span>
             <ArrowRight className="w-3.5 h-3.5 text-gold group-hover:translate-x-1 transition-transform" />

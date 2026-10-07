@@ -110,14 +110,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-ivory text-charcoal relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 md:py-32 bg-gradient-to-b from-[#ECE2D4] via-[#FAF6EE] to-[#EBE2D4] text-charcoal relative overflow-hidden">
+      {/* Background ambient radial glows */}
+      <div className="absolute top-1/4 right-1/4 w-[650px] h-[450px] bg-gradient-to-b from-champagne/25 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 md:mb-20">
           <Reveal>
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[1.5px] bg-gold" />
+              <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
               <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
                 CONTACT KSHETRY &amp; CO.
               </span>
@@ -125,8 +128,8 @@ export default function Contact() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-burgundy leading-[1.12] mb-4">
-              Let&apos;s Discuss Your Matter.
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.12] mb-4">
+              <span className="text-gradient-burgundy">Let&apos;s Discuss Your Matter.</span>
             </h2>
           </Reveal>
 
@@ -275,7 +278,7 @@ export default function Contact() {
 
           {/* Right Column: Premium Form with Validation and Shake Animation */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-gold/40 p-8 sm:p-10 shadow-elevated relative">
+            <div className="bg-gradient-to-b from-white via-[#FCFAF6] to-[#F8F2E8] border border-gold/40 p-8 sm:p-10 shadow-elevated relative rounded-sm">
               
               {isSubmitted ? (
                 /* Success State with Animated SVG Checkmark */
@@ -547,7 +550,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="group relative w-full overflow-hidden bg-burgundy hover:bg-burgundyDark text-white text-xs uppercase font-sans font-semibold tracking-widest py-4 border border-burgundy transition-all duration-300 shadow-sm"
+                      className="group relative w-full overflow-hidden bg-gradient-to-r from-burgundy via-[#80132F] to-burgundy text-white text-xs uppercase font-sans font-semibold tracking-widest py-4 border border-gold/40 hover:border-gold transition-all duration-300 shadow-md"
                     >
                       <span className="relative z-10 flex items-center justify-center gap-3">
                         {isSubmitting ? (

@@ -17,17 +17,18 @@ export default function Journey() {
   });
 
   return (
-    <section className="py-24 md:py-32 bg-[#F3EFE6] border-y border-gold/25 relative overflow-hidden">
-      {/* Subtle background ambient seal */}
+    <section className="py-24 md:py-32 bg-gradient-to-b from-[#ECE3D4] via-[#F7F1E7] to-[#EDE3D2] border-y border-gold/25 relative overflow-hidden">
+      {/* Subtle background ambient seal & radial glow */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-gold/15 pointer-events-none -mr-32" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-amber-100/30 to-transparent rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="max-w-3xl mb-16 md:mb-24">
           <Reveal>
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[1.5px] bg-gold" />
+              <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
               <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
                 OUR JOURNEY
               </span>
@@ -35,13 +36,13 @@ export default function Journey() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-burgundy leading-[1.18] mb-4">
-              {firmData.journeyHeading}
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium leading-[1.18] mb-4">
+              <span className="text-gradient-burgundy">{firmData.journeyHeading}</span>
             </h2>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <p className="font-sans text-xs sm:text-sm font-semibold tracking-super-wide uppercase text-gold">
+            <p className="font-sans text-xs sm:text-sm font-semibold tracking-super-wide uppercase text-gradient-gold">
               {firmData.journeyTagline}
             </p>
           </Reveal>
@@ -56,7 +57,7 @@ export default function Journey() {
           {/* Animated Gold Line that Draws Down on Scroll */}
           <motion.div
             style={{ scaleY: lineHeight }}
-            className="absolute left-[11px] sm:left-[19px] md:left-[27px] top-4 bottom-4 w-[2px] bg-gold origin-top shadow-sm"
+            className="absolute left-[11px] sm:left-[19px] md:left-[27px] top-4 bottom-4 w-[2.5px] bg-gradient-to-b from-gold via-[#E8CF8C] to-gold origin-top shadow-sm"
           />
 
           <div className="space-y-14 md:space-y-20">
@@ -74,7 +75,7 @@ export default function Journey() {
                   {/* Ripple pulse circle */}
                   <span className="absolute w-full h-full rounded-full bg-gold/25 animate-ping opacity-75" />
                   {/* Outer ring */}
-                  <span className="relative w-4 h-4 rounded-full bg-ivory border-2 border-gold flex items-center justify-center">
+                  <span className="relative w-4 h-4 rounded-full bg-ivory border-2 border-gold flex items-center justify-center shadow-sm">
                     {/* Inner gold center dot */}
                     <span className="w-1.5 h-1.5 rounded-full bg-burgundy" />
                   </span>
@@ -82,10 +83,10 @@ export default function Journey() {
 
                 {/* Milestone Content sliding in */}
                 <Reveal delay={0.15} xOffset={24} yOffset={0}>
-                  <div className="bg-white/70 backdrop-blur-sm border border-gold/30 p-6 sm:p-8 hover:border-gold transition-colors duration-300">
+                  <div className="bg-gradient-to-br from-white/95 via-white/85 to-[#FAF5EC]/90 backdrop-blur-sm border border-gold/30 p-6 sm:p-8 hover:border-gold shadow-sm hover:shadow-premium transition-all duration-300 rounded-sm">
                     <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-3 border-b border-gold/15 pb-3">
                       <div className="flex items-center gap-3">
-                        <span className="font-serif text-2xl sm:text-3xl font-light text-gold">
+                        <span className="font-serif text-2xl sm:text-3xl font-light text-gradient-gold">
                           {step.year}
                         </span>
                         <h3 className="font-serif text-xl sm:text-2xl font-medium text-burgundy tracking-wide">

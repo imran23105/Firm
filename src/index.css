@@ -14,7 +14,7 @@
   }
 }
 
-/* Custom editorial styling */
+/* Custom editorial typography */
 .font-serif {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
@@ -23,7 +23,20 @@
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
-/* Gold Shimmer effect for titles */
+/* Luxury Editorial Text Gradients */
+.text-gradient-burgundy {
+  background: linear-gradient(135deg, #4A071A 0%, #6F1028 45%, #921E3E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #A8762D 0%, #DFBD74 40%, #8E5C1B 75%, #D4AC5F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Shimmer Effect */
 @keyframes goldShimmer {
   0% {
     background-position: -200% 0;
@@ -36,11 +49,13 @@
 .gold-shimmer {
   background: linear-gradient(
     90deg,
-    #C8A15A 0%,
-    #F3E7C4 50%,
-    #C8A15A 100%
+    #9E6B22 0%,
+    #E8D099 35%,
+    #FFF1CE 50%,
+    #E8D099 65%,
+    #9E6B22 100%
   );
-  background-size: 200% auto;
+  background-size: 250% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

@@ -27,15 +27,18 @@ export default function Insights() {
     selectedCategory === 'Editorials';
 
   return (
-    <section id="insights" className="py-24 md:py-32 bg-ivory text-charcoal relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="insights" className="py-24 md:py-32 bg-gradient-to-b from-[#ECE2D2] via-[#FAF6EE] to-[#EDE4D5] text-charcoal relative overflow-hidden">
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/4 left-1/3 w-[700px] h-[500px] bg-gradient-to-tr from-champagne/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 pb-6 border-b border-gold/30">
           <div>
             <Reveal>
               <div className="flex items-center gap-3 mb-3">
-                <span className="w-8 h-[1.5px] bg-gold" />
+                <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
                 <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
                   INTELLIGENCE &amp; COMMENTARY
                 </span>
@@ -43,8 +46,8 @@ export default function Insights() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-burgundy leading-[1.12]">
-                Insights
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.12]">
+                <span className="text-gradient-burgundy">Insights</span>
               </h2>
             </Reveal>
 
@@ -97,15 +100,15 @@ export default function Insights() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6 }}
-              className="bg-[#3B0718] text-white border border-gold/40 p-8 sm:p-12 shadow-elevated relative overflow-hidden"
+              className="bg-gradient-to-br from-[#27030F] via-[#48081B] to-[#1E020B] text-white border border-gold/50 p-8 sm:p-12 shadow-elevated relative overflow-hidden rounded-sm"
             >
               {/* Subtle background glow */}
-              <div className="absolute right-0 top-0 w-96 h-96 bg-champagne/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute right-0 top-0 w-96 h-96 bg-gradient-to-bl from-gold/15 to-transparent rounded-full blur-3xl pointer-events-none" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div className="lg:col-span-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-[10px] font-sans font-bold uppercase tracking-super-wide text-gold">
+                    <span className="text-[10px] font-sans font-bold uppercase tracking-super-wide text-gradient-gold">
                       {featuredInsight.eyebrow}
                     </span>
                     <span className="text-gold/40">•</span>
@@ -144,7 +147,7 @@ export default function Insights() {
                 <div className="lg:col-span-4 flex lg:justify-end">
                   <button
                     onClick={() => setActiveReadingModal(featuredInsight)}
-                    className="group bg-gold text-burgundyDark hover:bg-white font-sans text-xs uppercase font-bold tracking-widest px-8 py-4 flex items-center gap-3 transition-colors duration-300"
+                    className="group bg-gradient-to-r from-gold via-[#DFBE74] to-gold hover:from-white hover:to-white text-burgundyDark font-sans text-xs uppercase font-bold tracking-widest px-8 py-4 flex items-center gap-3 transition-all duration-300 shadow-md"
                   >
                     <span>READ INSIGHT</span>
                     <ArrowRight className="w-4 h-4 text-burgundyDark group-hover:translate-x-1 transition-transform" />
@@ -166,7 +169,7 @@ export default function Insights() {
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.4 }}
                   onClick={() => setActiveReadingModal(article)}
-                  className="group cursor-pointer bg-white border border-gold/30 hover:border-gold p-6 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-premium"
+                  className="group cursor-pointer bg-gradient-to-b from-white via-[#FCFAF6] to-[#F7EFE4] border border-gold/30 hover:border-gold p-6 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-premium rounded-sm"
                 >
                   <div>
                     {/* Top Meta info */}

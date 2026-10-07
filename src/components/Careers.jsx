@@ -33,14 +33,17 @@ export default function Careers() {
   };
 
   return (
-    <section id="careers" className="py-24 md:py-32 bg-[#F6F2EB] border-t border-gold/25 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="careers" className="py-24 md:py-32 bg-gradient-to-b from-[#EDE4D5] via-[#F8F4EC] to-[#ECE2D4] border-t border-gold/25 relative overflow-hidden">
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/3 left-1/4 w-[600px] h-[400px] bg-gradient-to-br from-champagne/25 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 md:mb-16">
           <Reveal>
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[1.5px] bg-gold" />
+              <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
               <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
                 CAREERS
               </span>
@@ -48,8 +51,8 @@ export default function Careers() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-burgundy leading-[1.14] mb-4">
-              Build Your Practice. Expand Your Perspective.
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.14] mb-4">
+              <span className="text-gradient-burgundy">Build Your Practice. Expand Your Perspective.</span>
             </h2>
           </Reveal>
 
@@ -61,7 +64,7 @@ export default function Careers() {
         </div>
 
         {/* 3-Tier Filter Console */}
-        <div className="bg-white/90 border border-gold/30 p-6 mb-12 shadow-sm space-y-4">
+        <div className="bg-gradient-to-br from-white/95 via-white/85 to-[#FAF5EC]/90 border border-gold/30 p-6 mb-12 shadow-sm space-y-4 rounded-sm">
           <div className="text-[10px] font-sans font-bold tracking-super-wide uppercase text-burgundy">
             CAREER OPPORTUNITY FILTERS
           </div>
@@ -135,11 +138,11 @@ export default function Careers() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.35 }}
-                  className="bg-white border border-gold/30 hover:border-gold p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 shadow-sm hover:shadow-premium group"
+                  className="bg-gradient-to-r from-white/95 via-white/90 to-[#FAF6EE]/85 hover:to-[#F7EDE0] border border-gold/30 hover:border-gold p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 shadow-sm hover:shadow-premium group rounded-sm"
                 >
                   <div className="space-y-2">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 bg-champagne/40 text-burgundy font-semibold">
+                      <span className="text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 bg-gradient-to-r from-champagne/60 to-gold/20 text-burgundy font-semibold">
                         {job.location}
                       </span>
                       <span className="text-[10px] font-sans tracking-wider uppercase text-charcoal/50">
@@ -163,7 +166,7 @@ export default function Careers() {
                   <div className="flex-shrink-0 self-start md:self-center">
                     <button
                       onClick={() => setSelectedJobModal(job)}
-                      className="group/btn bg-transparent hover:bg-burgundy text-burgundy hover:text-white border border-burgundy text-xs uppercase font-sans font-semibold tracking-wider px-5 py-3 flex items-center gap-2 transition-colors duration-300"
+                      className="group/btn bg-transparent hover:bg-gradient-to-r hover:from-burgundy hover:to-[#8B1433] text-burgundy hover:text-white border border-burgundy text-xs uppercase font-sans font-semibold tracking-wider px-5 py-3 flex items-center gap-2 transition-all duration-300 shadow-sm"
                     >
                       <span>VIEW POSITION</span>
                       <ArrowRight className="w-3.5 h-3.5 text-gold group-hover/btn:translate-x-1 transition-transform" />

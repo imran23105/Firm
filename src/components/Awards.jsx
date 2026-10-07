@@ -7,20 +7,23 @@ export default function Awards() {
   const [selectedAward, setSelectedAward] = useState(null);
 
   return (
-    <section id="awards" className="py-20 md:py-28 bg-[#F6F2EB] border-t border-gold/25 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="awards" className="py-20 md:py-28 bg-gradient-to-b from-[#ECE3D5] via-[#F8F4EC] to-[#ECE2D2] border-t border-gold/25 relative overflow-hidden">
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/2 right-1/4 w-[600px] h-[400px] bg-gradient-to-l from-champagne/25 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 md:mb-16">
           <div className="flex items-center gap-3 mb-3">
-            <span className="w-8 h-[1.5px] bg-gold" />
+            <span className="w-8 h-[1.5px] bg-gradient-to-r from-gold/40 via-gold to-gold" />
             <span className="text-xs font-sans font-semibold tracking-super-wide uppercase text-burgundy">
               RECOGNITION
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-burgundy leading-[1.15] mb-4">
-            Recognition of Professional Excellence
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.15] mb-4">
+            <span className="text-gradient-burgundy">Recognition of Professional Excellence</span>
           </h2>
 
           <p className="font-sans text-charcoal/80 text-base md:text-lg font-light leading-relaxed">
@@ -34,13 +37,13 @@ export default function Awards() {
             <div
               key={award.id}
               onClick={() => setSelectedAward(award)}
-              className="group cursor-pointer bg-white border border-gold/30 hover:border-gold transition-colors duration-200 p-5 sm:p-7 md:p-8 shadow-sm hover:shadow-premium flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-6 w-full"
+              className="group cursor-pointer bg-gradient-to-r from-white/95 via-white/90 to-[#FAF6EE]/85 hover:to-[#F7EDE0] border border-gold/30 hover:border-gold transition-all duration-300 p-5 sm:p-7 md:p-8 shadow-sm hover:shadow-premium flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-6 w-full rounded-sm"
             >
               {/* Left Details: Year + Title + Summary */}
               <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 flex-1 min-w-0">
                 {/* Year Tag */}
                 <div className="flex sm:flex-col items-baseline sm:items-start gap-2 sm:gap-0 flex-shrink-0">
-                  <span className="font-serif text-3xl sm:text-4xl font-light text-gold group-hover:text-burgundy transition-colors">
+                  <span className="font-serif text-3xl sm:text-4xl font-light text-gradient-gold group-hover:scale-105 inline-block transition-transform">
                     {award.year}
                   </span>
                   <span className="text-[9px] font-mono tracking-widest uppercase text-charcoal/40">
