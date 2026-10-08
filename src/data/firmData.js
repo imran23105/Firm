@@ -471,3 +471,31 @@ export const practiceAreaDropdownOptions = [
   "Private Client, NRI & Family Business Advisory",
   "General Multi-Jurisdictional Query"
 ];
+
+export const socialLinks = [
+  {
+    name: 'LinkedIn',
+    label: 'Connect on LinkedIn',
+    url: 'https://www.linkedin.com/company/kshetryandco/',
+    icon: 'linkedin'
+  },
+  {
+    name: 'Facebook',
+    label: 'Follow on Facebook',
+    url: 'https://www.facebook.com/share/1VLDHLWFR9/',
+    icon: 'facebook'
+  },
+  {
+    name: 'Instagram',
+    label: 'Follow on Instagram',
+    url: 'https://www.instagram.com/kshetry_and_co?stkn=MWhiZGZmc204azl3OA==',
+    icon: 'instagram'
+  },
+  {
+    name: 'YouTube',
+    label: 'Subscribe on YouTube',
+    url: 'https://youtube.com/@rajeshkshetry8568?si=0GicFApUheHOn-4X',
+    icon: 'youtube'
+  }
+];
+
